@@ -1,0 +1,21 @@
+<div class="container">
+
+  <p id="notice"><%= notice %></p>
+
+  <h1>Cocktails</h1>
+  <ul class="list-unstyled">
+    <% @cocktails.each do |cocktail| %>
+     <div class="row text-center">
+      <li>
+        <h3>
+          <%= cocktail.name %>
+        </h3>
+      </li>
+    </div>
+    <% end %>
+  </ul>
+
+  <br>
+
+  <%= link_to 'New cocktail', new_cocktail_path, class: "btn btn-link" %>
+</div>
