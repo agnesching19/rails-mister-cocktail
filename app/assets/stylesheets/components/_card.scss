@@ -1,23 +1,32 @@
 .card {
   display: flex;
-  background-color: lightblue;
-  margin: 10px;
-  padding: 20px;
+  background-size: cover;
+  margin: 20px 20px;
+  padding: 5px;
   cursor: pointer;
   width: 300px;
-    h3 {
+  height: 150px;
+    h3 a {
       padding: 10px 10px;
       text-align: center;
       position: relative;
-
+      color: #FFFFFF;
     }
-  }
+}
+
+.card:hover {
+  margin-top: -5px;
+}
 
 .cards {
-  background-image: url('./app/assets/images/background.jpg');
-  background-size: cover;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   text-align: center;
+}
+
+.home-card {
+  display: flex;
+  width: 280px;
+  color: #FFFFFF;
 }

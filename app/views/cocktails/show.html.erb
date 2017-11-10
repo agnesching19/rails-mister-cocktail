@@ -4,7 +4,7 @@
   <h3>
     Cocktail: <strong><%= @cocktail.name %></strong>
     <br>
-    <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+    <%= image_tag @cocktail.photo, width: 600, crop: :fill %>
   </h3>
 
   <p><strong>Add ingredient:</strong></p>

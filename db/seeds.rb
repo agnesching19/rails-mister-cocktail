@@ -13,68 +13,101 @@ ingredients["drinks"].each do |ingredient|
 end
 
 cocktails = [
-  { name: "Old Fashioned"
-    },
-  { name: "Daiquiri"
-    },
-  { name: "Margarita"
-    },
-  { name: "Sidecar"
+  {
+    name: "Old Fashioned",
+    photo: "http://www.seriouseats.com/images/2014/11/20141104-cocktail-party-old-fashioneds-holiday-vicky-wasik-3.jpg"
     },
   {
-    name: "French 75"
+    name: "Daiquiri",
+    photo: "http://www.seriouseats.com/images/2015/03/20150323-cocktails-vicky-wasik-daiquiri.jpg"
     },
   {
-    name: "Bloody Mary"
+    name: "Margarita",
+    photo: "http://www.seriouseats.com/images/2015/03/20150323-cocktails-vicky-wasik-margarita.jpg"
     },
   {
-    name: "Irish Coffee"
+    name: "Sidecar",
+    photo: "http://www.seriouseats.com/images/2014/11/20141101-cognac-sidecar-carey-jones.jpg"
     },
   {
-    name: "Jack Rose"
+    name: "French 75",
+    photo: "http://www.seriouseats.com/images/2015/03/20150323-cocktails-vicky-wasik-french75.jpg"
     },
   {
-    name: "Negroni"
+    name: "Bloody Mary",
+    photo: "http://www.seriouseats.com/images/2015/03/twase-20150320-21.jpg"
     },
   {
-    name: "Boulevardier"
+    name: "Irish Coffee",
+    photo: "http://www.seriouseats.com/images/2015/03/20150323-cocktails-vicky-wasik-irish-coffee.jpg"
     },
   {
-    name: "Sazerac"
+    name: "Jack Rose",
+    photo: "http://www.seriouseats.com/images/2015/03/20150323-cocktails-vicky-wasik-jack-rose.jpg"
     },
   {
-    name: "Vieux Carré"
+    name: "Negroni",
+    photo: "http://www.seriouseats.com/images/2015/03/20150323-cocktails-vicky-wasik-negroni.jpg"
     },
   {
-    name: "Ramos Gin Fizz"
+    name: "Boulevardier",
+    photo: "http://www.seriouseats.com/images/2015/03/20150323-cocktails-vicky-wasik-boulevardier.jpg"
     },
   {
-    name: "Mint Julep"
+    name: "Sazerac",
+    photo: "http://www.seriouseats.com/images/2015/03/20150323-cocktails-vicky-wasik-sazerac.jpg"
     },
   {
-    name: "Whiskey Sour"
+    name: "Vieux Carré",
+    photo: "http://www.seriouseats.com/images/2015/03/20150323-cocktails-vicky-wasik-vieux-carre.jpg"
     },
   {
-    name: "Mai Tai"
+    name: "Ramos Gin Fizz",
+    photo: "http://www.seriouseats.com/images/2015/03/20150323-cocktails-robyn-lee-ramos-gin-fizz.jpg"
     },
   {
-    name: "Planter's Punch"
+    name: "Mint Julep",
+    photo: "http://www.seriouseats.com/images/2015/03/20150323-cocktails-vicky-wasik-mint-julep.jpg"
     },
   {
-    name: "Pisco Sour"
+    name: "Whiskey Sour",
+    photo: "http://www.seriouseats.com/images/2015/03/20150323-cocktails-vicky-wasik-whiskey-sour.jpg"
     },
   {
-    name: "Cosmopolitan"
+    name: "Mai Tai",
+    photo: "http://www.seriouseats.com/images/2015/03/20150323-cocktails-vicky-wasik-mai-tai.jpg"
     },
   {
-    name: "Tom Collins"
+    name: "Planter's Punch",
+    photo: "http://www.seriouseats.com/images/2015/04/20150406-cocktails-planters-punch-robyn-lee-1.jpg"
     },
   {
-    name: "Last Word"
+    name: "Pisco Sour",
+    photo: "http://www.seriouseats.com/images/2015/03/20150323-cocktails-vicky-wasik-pisco-sour.jpg"
     },
+  {
+    name: "Cosmopolitan",
+    photo: "http://www.seriouseats.com/images/2015/03/20150323-cocktails-vicky-wasik-cosmopolitan.jpg"
+    },
+  {
+    name: "Tom Collins",
+    photo: "http://www.seriouseats.com/images/2015/03/20150323-cocktails-vicky-wasik-tom-collins.jpg"
+    },
+  {
+    name: "Last Word",
+    photo: "http://www.seriouseats.com/images/2015/03/20150323-cocktails-vicky-wasik-last-word.jpg"
+  }
 ]
 
-cocktails.each { |cocktail| Cocktail.create(cocktail) }
+cocktails.each do |c|
+  url = c[:photo]
+  cocktail = Cocktail.new(c)
+  cocktail.remote_photo_url = url
+  cocktail.save
+
+  puts "give me cocktail! #{cocktail.name}"
+end
+
 
 
 
