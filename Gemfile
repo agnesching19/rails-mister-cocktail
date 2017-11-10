@@ -9,7 +9,7 @@ ruby '2.3.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -36,7 +36,6 @@ gem 'autoprefixer-rails'
 gem 'bootstrap-sass' # Bootstrap v3
 gem 'font-awesome-sass'
 gem 'simple_form'
-gem "pg"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
