@@ -2,6 +2,7 @@
 
   <p id="notice"><%= notice %></p>
 
+  <%= image_tag "background.jpg", alt: "background", width: 400 %>
   <ul class="list-unstyled cards">
     <% @cocktails.each do |cocktail| %>
       <div class="row text-center card">
@@ -9,6 +10,7 @@
         <li>
           <h3>
             <%= link_to cocktail.name, cocktail_path(cocktail) %>
+
           </h3>
         </li>
         </div>

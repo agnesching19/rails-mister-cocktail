@@ -14,6 +14,8 @@
   }
 
 .cards {
+  background-image: url('./app/assets/images/background.jpg');
+  background-size: cover;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
