@@ -1,0 +1,21 @@
+.card {
+  display: flex;
+  background-color: lightblue;
+  margin: 10px 10px 100px 10px;
+  padding: 20px 20px 150px 20px;
+  cursor: pointer;
+  width: 300px;
+    h3 {
+      padding: 10px 10px;
+      text-align: center;
+      position: relative;
+
+    }
+  }
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}

@@ -2,15 +2,23 @@
   <p id="notice"><%= notice %></p>
 
   <h3>
-    Name: <strong><%= @cocktail.name %></strong>
+    Cocktail: <strong><%= @cocktail.name %></strong>
   </h3>
 
-  <% @cocktail.doses.each do |dose| %>
-   <%= dose.description %>
-   <% end  %>
+  <p><strong>Add ingredient:</strong></p>
 
- <%= link_to "add dose", new_cocktail_dose_path(@cocktail), class: 'btn btn-primary' %>
+  <ul class="list-unstyled">
+    <% @cocktail.doses.each do |dose| %>
+      <li>
+        <%= dose.description %>
+        (<%= link_to "Delete", dose_path(dose), method: :delete %>)
+      </li>
+    <% end %>
+  </ul>
+
+  <%= link_to "add dose", new_cocktail_dose_path(@cocktail), class: 'btn btn-primary' %>
 
   <hr>
+
   <%= link_to 'Back', cocktails_path, class: "btn btn-info" %>
 </div>

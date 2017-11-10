@@ -1,3 +1,5 @@
+<div class="container">
+
 <h2 class="text-center">Create a new dose</h2>
 
 <%= simple_form_for [@cocktail, @dose] do |f| %>
@@ -14,4 +16,5 @@
 
 <hr>
 
-<p class="text-center"><%= link_to "Back to list", cocktail_doses_path %></p>
+<p class="text-center"><%= link_to "Back to list", cocktail_path(@cocktail) %></p>
+</div>
